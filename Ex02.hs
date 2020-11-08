@@ -88,10 +88,9 @@ eval d (Dvd x y) = case (eval d x, eval d y) of
   (Right n1, Right n2)        -> Right (n1 / n2)
   _                           -> Left "div by zero"
 eval d (Var i) = find d i
-eval d (Def x e1 e2) =
-  case eval d e1 of
-    Right a -> eval (define d x a) e2
-    _       -> Left "div by zero"
+eval d (Def x e1 e2) = case eval d e1 of
+  Right a -> eval (define d x a) e2
+  _       -> Left "div by zero"
 
 -- Part 1 : Expression Laws -- (15 test marks, worth 15 Exercise Marks) --------
 
