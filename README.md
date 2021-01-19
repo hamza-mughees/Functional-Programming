@@ -1,2 +1,2 @@
 # Functional Programming
-These are the solutions to the assignments in the Functional Programming module
+These are the solutions to the assignments in the Functional Programming module: CSU34016
